@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <title> new document </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <SCRIPT LANGUAGE="javascript">  
+　　<!--  
+　　function AutomateExcel()  
+　　{  
+　　// Start Excel and get Application object.  
+　　var oXL = new ActiveXObject("Excel.Application");  
+　　// Get a new workbook.  
+　　var oWB = oXL.Workbooks.Add();  
+　　var oSheet = oWB.ActiveSheet;  
+　　var table = document.all.data;  
+　　var hang = table.rows.length; 
+　　var lie = table.rows(0).cells.length;  
+　　// Add table headers going cell by cell.  
+　　for (i=0;i<hang;i++)  
+　　{  
+　　for (j=0;j<lie;j++)  
+　　{  
+　　//oSheet.Cells(i+1,j+1).Font.Bold = True  
+　　//oSheet.Cells(i+1,j+1).Font.Size = 50  
+　　//oSheet.Cells(i+1,j+1).Alignment = 2
+　　oSheet.Cells(i+1,j+1).value = table.rows(i).cells(j).innerText;  
+　　}  
+　　}  
+　　oXL.Visible = true;  
+　　oXL.UserControl = true;  
+　　}  
+　　//-->
+　　</SCRIPT>
+ </head>
+
+ 
+ <body>
+  　<table border="1" width="100%" id="data">
+　　<tr>
+　　 <td> 姓名</td>
+　　 <td colspan="2">年龄</td>
+　　 <td>出生日期</td>
+　　</tr>
+　　<tr>
+　　 <td>6</td>
+　　 <td>25</td>
+　　 <td colspan="2">8</td>
+　　</tr>
+　　<tr>
+　　 <td height="22">1</td>
+　　 <td height="22">2</td>
+　　 <td colspan="2" height="22">4</td>
+　　</tr>
+　　</table>
+<input type="button" name="out_excel" onclick="AutomateExcel();" value="导出到excel" class="notPrint">
+ </body>
+</html>

@@ -1,0 +1,586 @@
+/*
+这是我所有的定制css 组合
+ */
+
+
+/*
+定制基本元素
+ */
+
+body,
+html {
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size: 18px;
+}
+/*
+input,
+textarea {
+	z-index: 50;
+}*/
+
+.icon-lg {
+    font-size: 32em;
+    color: red;
+}
+
+.label {
+    display: inline-block;
+    font-size: 18px;
+    margin:0 15px 15px 0;
+    line-height: normal;
+    color: #A29F9F;
+    border: 1px solid #C5C0C0;
+    background-color: white;
+    cursor: pointer;
+}
+.label:hover{
+    background-color: #485FAD;
+}
+
+textarea {
+                padding: 10px;
+                vertical-align: top;
+                width: 100%;
+                border: 1px solid #4C884D;
+                border-radius: 6px;
+            }
+            textarea:focus {
+                outline-style: solid;
+                outline-width: 2px;
+            }
+
+
+/*
+自动增高形texterea 
+ */
+
+.text_box {
+    max-height: 600px;
+    padding: 3px;
+    outline: 0;
+    border: 1px solid #a0b3d6;
+    font-size: 20px;
+    line-height: 28px;
+    min-height: 300px;
+    padding: 5px;
+    padding-left: 10px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 5px;
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+
+/*
+ 定制开启等待旋转页面
+  */
+
+
+/*
+使元素水平垂直居中
+ */
+
+.center-load {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/*
+一个css3旋转元素
+ */
+
+.loading {
+    z-index: 999;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid #3399ff;
+    border-top: 20px solid red;
+    border-left: 20px solid yellow;
+    border-bottom: 20px solid green;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    /* Animate and rotate the spinner using CSS3 Animations */
+    animation: bganim 0.6s linear 0s infinite;
+    /* moz: Vendor prefixe for Mozilla Firefox */
+    -moz-animation: bganim 0.6s linear 0s infinite;
+    /* webkit: Vendor prefixe for Google Chrome, Chromium, Apple Safari... */
+    -webkit-animation: bganim 0.6s linear 0s infinite;
+}
+
+@keyframes bganim {
+    /* Rotate the div 360° */
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes bganim {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes bganim {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/*
+定制auotocomplete
+ */
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+/*
+定制顶部导航栏
+ */
+
+@media(min-width:768px) {
+    .navbar-default {
+        background: linear-gradient(to right, #296ad4 0%, #4e8ef7 100%);
+        margin-bottom: 0px;
+        border: 0;
+    }
+    .navbar .navbar-brand {
+        font-size: 32px;
+        line-height: 60px;
+        color: #C8D3EA;
+    }
+    .navbar .navbar-collape a {
+        //居然无效
+        font-size: 32px;
+        line-height: 60px;
+        color: white;
+    }
+    .navbar-default .navbar-nav > li > a {
+        line-height: 64px;
+        color: #C8D3EA;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .navbar-nav >li:hover {
+        color: white;
+        background-color: #0D78D0;
+    }
+    .navbar-default .navbar-nav > li > a:hover {
+        color: white;
+    }
+    .navbar .navbar-brand:hover {
+        color: white;
+    }
+}
+
+.navbar-toggle {
+    margin-right: 15%;
+}
+
+
+/*
+header
+ */
+
+header {
+    text-align: center;
+    color: #fff;
+    //background: linear-gradient(to right, #88B1F5 0%, #4e8ef7 100%);
+    background: linear-gradient(to right, #296ad4 0%, #4e8ef7 100%);
+}
+
+header img {
+    margin: 0 auto 0px;
+    -webkit-mask-image:url('//localhost/img/mark.jpg');
+}
+
+/*css3遮罩效果
+mask 的属性：
+-webkit-mask-image:url | gradient //可以使用图片或渐变作为遮罩层
+-webkit-mask-repeat:repeat | repeat-x | repeat-y | no-repeat
+-webkit-mask-position:x y;
+-webkit-mask-clip:border | padding | content
+-webkit-mask-origin:border | padding | content
+ */
+
+header .container {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+hr.star-light {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border-top: solid 5px; //hr的厚度
+    text-align: center; //用了after后确保居中
+}
+
+hr.star-light:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.75em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 1.8em;
+}
+
+header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+.icon-md {
+    font-size: 64px;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+    header .intro-text .name {
+        font-size: 2em;
+    }
+    header .intro-text .skills {
+        font-size: 1.75em;
+    }
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.lead {
+    font-weight: bold;
+}
+
+
+/**
+ * <!-- 阿里妈妈字库，特殊字体，网页字体-->
+ */
+
+@font-face {
+    font-family: 'webfont';
+    src: url('//at.alicdn.com/t/yb77984ps9s2x1or.eot');
+    /* IE9*/
+    src: url('//at.alicdn.com/t/yb77984ps9s2x1or.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/yb77984ps9s2x1or.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/yb77984ps9s2x1or.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/yb77984ps9s2x1or.svg#NotoSansHans-Black') format('svg');
+    /* iOS 4.1- */
+}
+
+.web-font {
+    font-family: "webfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/**
+ * !--endalimamafont-->
+ */
+
+
+/*
+背景图片居中方案
+ */
+
+.background-img {
+    background-image: url("img/profile.png");
+    background-size: 130px auto;
+    min-height: 300px;
+    background-position: 0px 20px;
+    background-repeat: no-repeat;
+}
+
+.background-img p {
+    padding-left: 150px;
+}
+
+.expression {
+    height: expression(document.getElementById('ee').offsetHeight+"px");
+}
+
+
+/*
+居中方案结束
+ */
+
+
+/*
+尾栏链接定制
+ */
+
+footer{
+	background: #2b3442;
+	color: #a4b3cd;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 40px;
+}
+
+footer .copy-container {
+	padding: 18px;
+	background: #202532;
+}
+/*
+.footer {
+    position: relative;
+    z-index: 100;
+
+    background: #2b3442;
+    color: #a4b3cd;
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer .base-links dl {
+    float: left;
+    margin: 0;
+    padding: 15px 10px 20px 10px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.footer .base-links dt,
+.footer .newsletter-text {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #e2eeff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.footer .copy {
+    padding: 18px;
+    background: #202532;
+}
+
+.footer .copy-container {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+*/
+
+
+/*
+offcanvas定制
+ */
+
+.offcanvas-toggle {
+    position: fixed;
+    top: 100px;
+    right: 3%;
+    background-color: blue;
+    z-index: 1000;
+}
+
+@media(max-width: 760px) {
+    .navbar-offcanvas {
+        background-color: #f8f8f8;
+        border-color: #e7e7e7;
+    }
+}
+
+.navbar-offcanvas {
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+
+/*
+well定制
+ */
+
+.well-lg {
+    padding: 24px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 24px;
+    border-color: #909026;
+    background-color: #ECECCD;
+    color: #AD1530;
+    font-weight: 700;
+}
+
+
+/*
+电脑时候左侧边栏
+ */
+
+#mobile_navbar {
+	width: 50%;
+	background-color: white;
+	position: absolute;
+	padding-left: 10px;
+	top: 40px;
+	left: -50%;
+	z-index: 1000;
+	min-height: 100%;
+	box-shadow: 2px 3px 5px rgb(35, 36, 169);
+	transition: all 0.25s;
+}
+
+#all>.container {
+    position: relative;
+}
+
+#left_slide_navbar {
+    position: absolute;
+    width: 20%;
+    margin-left: 2%;
+    z-index: 0;//以便让其他东西覆盖
+}
+
+.indent .list-group-item {
+    padding-left: 20%;
+}
+
+@media(max-width: 992px) {
+	#left_slide_navbar {
+		display: none;
+		top: 50px;
+		left: 10px;
+		background: rgb(50, 60, 60);
+	}
+	#all>.container {
+    position: initial;
+	}
+}
+
+@media(min-width: 1170px) {
+	#left_slide_navbar {
+		margin-left: 2%;
+	}
+}
+
+/*
+手机时候左侧栏
+ */
+
+
+/*
+滑动效果
+ */
+
+body>label {
+    cursor: pointer;
+	border: 20px solid blue;
+    border-radius: 20px;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    z-index: 1000;
+    opacity: 0.5;
+}
+/*
+蒙版
+ */
+#mask {
+	width: 100%;
+	height: 200%;
+	position: absolute;
+	display: none;
+	z-index: 999;
+	background-color: blue;
+	opacity: 0.5;
+}
+/*
+#tm:checked ~ #all,#tm:checked ~ header {
+    transform: translateX(250px);
+    opacity: 0.3;
+}
+#tm:checked ~ #left_slide_navbar {
+		display: block;
+	}
+*/
+#tm:checked ~ #mobile_navbar {
+	transform:translateX(100%);
+}
+#tm:checked ~ #mask {
+	display:block ;
+	border: 0px;
+}
+
+
+/*
+右侧内容主体
+ */
+
+
+#main_content {
+	background-color: white;
+}
+
+#main_content .head {
+    margin-top: 50px;
+}
+
+.m_content .panel-heading span {
+    margin-right: 10px;
+}
+
+.m_content .panel-heading {
+    font-size: 24px;
+}
+
+.m_content .panel-body {
+    text-align: right;
+}
+
+.page{
+    padding:0 auto;
+}
+.pagination {
+    text-align: center;
+    display: block;
+    
+}
+.pagination li{
+    display: inline-block;
+}
+
+
+/*
+文章提交表单
+ */
+
+.form-group-lg {
+    margin-bottom: 30px;
+}
